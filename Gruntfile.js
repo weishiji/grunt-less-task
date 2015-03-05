@@ -1,11 +1,12 @@
-console.log(arguments)
 module.exports = function(grunt){
+	var isCompress = grunt.option('isCompress') || false 
+	console.log(isCompress)
 	require('jit-grunt')(grunt);
 	grunt.initConfig({
 		less : {
 			development : {
 				options : {
-					compress : false 
+					compress : true 
 					,yuicompress : true
 					,optimization : 2
 				}
@@ -26,4 +27,5 @@ module.exports = function(grunt){
 	});
 
 	grunt.registerTask('default',['less','watch'])
+	grunt.registerTask('nowatch',['less'])
 }
