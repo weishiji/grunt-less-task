@@ -1,0 +1,18 @@
+# editor temp file
+*.tmp
+*.bak
+*.swp
+*.orig
+*~
+# mac OS
+.DS_Store
+
+# Directory-based project format
+.idea/
+
+# File-based project format
+*.ipr
+*.iws
+*.iml
+# nodejs module
+node_modules
