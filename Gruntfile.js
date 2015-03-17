@@ -10,9 +10,13 @@ module.exports = function(grunt){
 					,yuicompress : true
 					,optimization : 2
 				}
-				,files : {
-					'css/main.css' : 'less/main.less'
-				}
+				,files : [{
+					expand : true
+					,cwd : 'less'
+					,src : ['*.less']
+					,dest : 'css/'
+					,ext : '.css'
+				}]	
 			}
 		}
 		,watch : {
